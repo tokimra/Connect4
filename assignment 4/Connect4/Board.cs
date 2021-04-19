@@ -56,7 +56,7 @@ namespace Connect4
                 {
                     if (gameBoard[j, i] == Board.currentTurn && gameBoard[j, i + 1] == Board.currentTurn && gameBoard[j, i + 2] == Board.currentTurn && gameBoard[j, i + 3] == Board.currentTurn)
                     {
-                        Console.WriteLine("Winner");
+                        Console.WriteLine("We got a winner!");
                         return true;
                     }
                 }
@@ -68,7 +68,7 @@ namespace Connect4
                 {
                     if (gameBoard[j, i] == Board.currentTurn && gameBoard[j + 1, i] == Board.currentTurn && gameBoard[j + 2, i] == Board.currentTurn && gameBoard[j + 3, i] == Board.currentTurn)
                     {
-                        Console.WriteLine("Winner");
+                        Console.WriteLine("We got a winner!");
                         return true;
                     }
                 }
@@ -80,7 +80,7 @@ namespace Connect4
                 {
                     if (gameBoard[j, i] == Board.currentTurn && gameBoard[j + 1, i + 1] == Board.currentTurn && gameBoard[j + 2, i + 2] == Board.currentTurn && gameBoard[j + 3, i + 3] == Board.currentTurn)
                     {
-                        Console.WriteLine("Winner");
+                        Console.WriteLine("We got a winner!");
                         return true;
                     }
                 }
@@ -92,7 +92,7 @@ namespace Connect4
                 {
                     if (gameBoard[j, i] == Board.currentTurn && gameBoard[j - 1, i + 1] == Board.currentTurn && gameBoard[j - 2, i + 2] == Board.currentTurn && gameBoard[j - 3, i + 3] == Board.currentTurn)
                     {
-                        Console.WriteLine("Winner");
+                        Console.WriteLine("We got a winner!");
                         return true;
                     }
                 }
