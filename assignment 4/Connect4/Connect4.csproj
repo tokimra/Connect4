@@ -65,6 +65,18 @@
     <Compile Include="Connect 4 - GamePage.Designer.cs">
       <DependentUpon>Connect 4 - GamePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorMessage.Designer.cs">
+      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongratulationMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongratulationMessage.Designer.cs">
+      <DependentUpon>CongratulationMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Connect 4 - GamePage.resx">
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connect 4 - NamePage.resx">
       <DependentUpon>Connect 4 - NamePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorMessage.resx">
+      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CongratulationMessage.resx">
+      <DependentUpon>CongratulationMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

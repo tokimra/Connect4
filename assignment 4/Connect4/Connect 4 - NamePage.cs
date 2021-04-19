@@ -27,9 +27,10 @@ namespace Connect4
         }
         private void btnDonePress(object sender, EventArgs e)
         {
-            Board.player1 = txtBoxPlayer1.Text.Trim();
-            Board.player2 = txtBoxPlayer2.Text.Trim();
-            if (Board.player1.Equals("") || Board.player2.Equals(""))
+
+            Player1.player1 = txtBoxPlayer1.Text.Trim();
+            Player2.player2 = txtBoxPlayer2.Text.Trim();
+            if (Player1.player1.Equals("") || Player2.player2.Equals(""))
             {
                 lblInvalid.Text = "Names cannot be empty values! Try again.";
             }
@@ -39,6 +40,7 @@ namespace Connect4
                 this.Visible = false;
                 form2.ShowDialog();
                 System.Windows.Forms.Application.Exit();
+
             }
         }
 
