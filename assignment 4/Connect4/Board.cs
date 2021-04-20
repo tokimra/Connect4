@@ -42,20 +42,6 @@ namespace Connect4
             //Starts our with Player 1
             Board.currentTurn = Player1.red;
         }
-        //Print board onto console
-        public void printBoard()
-        {
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine("");
-                for (int j = 0; j <= 6; j++)
-                {
-                    Console.Write(gameBoard[i, j]);
-                    Console.Write(" ");
-                }
-            }
-            Console.WriteLine("");
-        }
         //Checks win conditions and returns true if conditions met
         public bool CheckWin()
         {

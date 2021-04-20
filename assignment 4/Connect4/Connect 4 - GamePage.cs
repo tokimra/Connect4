@@ -14,10 +14,9 @@ namespace Connect4
     {
         //Create board
         Board board = new Board();
-        //This will go through notion of printing boar onto console and checking win conditions. 
+        //This will go through notion of checking win conditions. 
         private void basicNotion()
         {
-            board.printBoard();
             //If conditions are met then display congratulations message
             if (board.CheckWin() == true)
             {
