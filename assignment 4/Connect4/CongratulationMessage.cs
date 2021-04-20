@@ -40,5 +40,10 @@ namespace Connect4
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void lblPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

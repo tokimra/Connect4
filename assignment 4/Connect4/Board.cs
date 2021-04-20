@@ -114,14 +114,16 @@ namespace Connect4
         }
         public void ResetBoard()
         {
-
+            initializeBoard();
+            gameWin = false;
         }
-        public void placeToken(int column)
+
+        public int paintRow(int column)
         {
             int row = -1;
             for (int i = 5; i >= 0; i--)
             {
-                if (gameBoard [i, column] == 'o' && i > row)
+                if (gameBoard[i, column] == 'o' && i > row)
                 {
                     row = i;
                 }
@@ -134,8 +136,8 @@ namespace Connect4
             {
                 ErrorMessage form3 = new ErrorMessage();
                 form3.ShowDialog();
-                NextTurn();
             }
+            return row;
         }
     }
 }
