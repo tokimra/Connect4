@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace Connect4
 {
+    /*
+     * Thomas Truong
+     * CSC 339 -02
+     * 04/20/2021
+     */
+
+    //Player contains name and represented by a char
     class Player1
     {
-
         public static string player1;
         public static char red = 'R';
     }
+    //Player contains name and represented by a char
     class Player2
     {
-
         public static string player2;
         public static char yellow = 'Y';
     }
@@ -23,7 +29,7 @@ namespace Connect4
         public static bool gameWin = false;
         public static char currentTurn;
         public char[,] gameBoard = new char[6, 7];
-
+        //Initialization of board
         public void initializeBoard()
         {
             for (int i = 0; i <=5; i++)
@@ -33,8 +39,10 @@ namespace Connect4
                     gameBoard[i, j] = 'o';
                 }
             }
+            //Starts our with Player 1
             Board.currentTurn = Player1.red;
         }
+        //Print board onto console
         public void printBoard()
         {
             for (int i = 0; i <= 5; i++)
@@ -48,8 +56,10 @@ namespace Connect4
             }
             Console.WriteLine("");
         }
+        //Checks win conditions and returns true if conditions met
         public bool CheckWin()
         {
+            //Checks for vertical win condition
             for (int i = 0; i <= 3; i++)
             {
                 for (int j = 0; j <= 5; j++)
@@ -61,7 +71,7 @@ namespace Connect4
                     }
                 }
             }
-
+            //Checks for horizontal win condition
             for (int i = 0; i <= 6; i++)
             {
                 for (int j = 0; j <= 2; j++)
@@ -73,7 +83,7 @@ namespace Connect4
                     }
                 }
             }
-
+            //Checks for diagonal win condition
             for (int i = 0; i <= 3; i++)
             {
                 for (int j = 0; j <= 2; j++)
@@ -85,7 +95,7 @@ namespace Connect4
                     }
                 }
             }
-
+            //Checks for alternative diagonal win condition
             for (int i = 0; i <= 3; i++)
             {
                 for (int j = 3; j <= 5; j++)
@@ -97,9 +107,10 @@ namespace Connect4
                     }
                 }
             }
-
+            //Returns false if no win conditions are met
             return false;
         }
+        //Changes current player to next player
         public char NextTurn()
         {
             if (Board.currentTurn == Player1.red)
@@ -112,12 +123,13 @@ namespace Connect4
             }
             return Board.currentTurn;
         }
+        //Resets board
         public void ResetBoard()
         {
             initializeBoard();
             gameWin = false;
         }
-
+        //Places token on board in respect to player color and returns the row to place token
         public int paintRow(int column)
         {
             int row = -1;
@@ -128,10 +140,12 @@ namespace Connect4
                     row = i;
                 }
             }
+            //Places token on board
             if (row >= 0)
             {
                 gameBoard[row, column] = Board.currentTurn;
             }
+            //Displays error message if columns are full
             else
             {
                 ErrorMessage form3 = new ErrorMessage();

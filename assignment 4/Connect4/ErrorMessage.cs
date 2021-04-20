@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Connect4
 {
     public partial class ErrorMessage : Form
     {
+        //Initialize form
         public ErrorMessage()
         {
             InitializeComponent();
         }
-
+        //Close the window if button is pressed
         private void btnOkPress(object sender, EventArgs e)
         {
             Close();

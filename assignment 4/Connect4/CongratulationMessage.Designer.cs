@@ -58,7 +58,6 @@ namespace Connect4
             this.lblPlayer.Size = new System.Drawing.Size(161, 55);
             this.lblPlayer.TabIndex = 1;
             this.lblPlayer.Text = "player";
-            this.lblPlayer.Click += new System.EventHandler(this.lblPlayer_Click);
             // 
             // label2
             // 
